@@ -1,0 +1,24 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "A project utilizing TypeScript, HTML, and SCSS.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "npm run build:ts && npm run build:scss",
+    "build:ts": "tsc",
+    "build:scss": "sass src/styles/main.scss dist/styles/main.css",
+    "watch": "concurrently \"tsc -w\" \"sass --watch src/styles/main.scss dist/styles/main.css\"",
+    "dev": "npm run build && live-server --port=3000 --open=/index.html",
+    "start": "npm run build && live-server --port=3000"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "sass": "^1.58.0",
+    "concurrently": "^7.6.0",
+    "live-server": "^1.2.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
