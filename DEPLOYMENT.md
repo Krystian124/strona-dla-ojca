@@ -11,8 +11,8 @@ This guide shows you how to deploy your project to various hosting platforms.
 
 2. **Your built files are in the `dist/` folder:**
    - `index.html`
-   - `dist/index.js`
-   - `dist/styles/main.css`
+   - `dist/index.ts`
+   - `dist/styles/main.scss`
 
 ## 🌐 Deployment Options
 
@@ -121,3 +121,124 @@ All platforms above support custom domains:
 - Check the platform's documentation
 - Look at the deployment logs
 - Verify your build output in the `dist/` folder 
+
+---
+
+## **How to Fix**
+
+### 1. **Check Your Import in `index.ts`**
+Make sure you are importing with the correct extension:
+```typescript
+import { Component1 } from './components/Component1/Component1';
+```
+**Do NOT** include the `.ts` or `.js` extension in the import.
+
+---
+
+### 2. **Check Your Build Output**
+After running:
+```bash
+npm run build
+```
+You should have this file:
+```
+dist/components/Component1/Component1.js
+```
+If it does **not** exist, your build is not working or your file/folder names are wrong.
+
+---
+
+### 3. **Check for Typos and Capitalization**
+- Make sure the folder and file names are **exactly** `Component1` (with a capital C).
+- File system is case-sensitive in some environments.
+
+---
+
+### 4. **Rebuild**
+1. Delete the `dist` folder:
+   ```bash
+   rm -rf dist
+   ```
+2. Rebuild:
+   ```bash
+   npm run build
+   ```
+
+---
+
+### 5. **Check Your `tsconfig.json`**
+Make sure you have:
+```json
+"outDir": "./dist",
+"rootDir": "./src"
+```
+
+---
+
+### 6. **Check Your `index.html`**
+Make sure you are loading the script like this:
+```html
+<script type="module" src="dist/index.js"></script>
+```
+
+---
+
+## **Summary**
+- The error is a 404: the browser can't find the compiled JS file for Component1.
+- Check your import paths, build output, and rebuild your project.
+
+---
+
+**If you still have issues:**
+- Show me the exact import line from your `src/index.ts`
+- Show me the structure of your `dist/components/Component1/` folder after building (`ls dist/components/Component1/`)
+- Copy any new error messages here
+
+This will help me give you the exact fix! 
+
+---
+
+To commit and push your code updates to GitHub, follow these steps in your terminal:
+
+---
+
+### 1. **Check the status of your changes**
+```sh
+git status
+```
+This will show you which files have been modified or added.
+
+---
+
+### 2. **Add the changed files to the staging area**
+To add all changes:
+```sh
+git add .
+```
+Or, to add specific files:
+```sh
+git add path/to/your/file
+```
+
+---
+
+### 3. **Commit your changes with a message**
+```sh
+git commit -m "Describe your update here, e.g. Refactor backend structure and add MySQL connection"
+```
+
+---
+
+### 4. **Push your changes to GitHub**
+```sh
+git push
+```
+If you are on a branch other than `main`, you may need to specify it:
+```sh
+git push origin your-branch-name
+```
+
+---
+
+**That’s it!**  
+Your code will be updated on GitHub. If you need help with authentication or see any errors, let me know what they are and I’ll help you resolve them! 

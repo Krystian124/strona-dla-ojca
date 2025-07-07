@@ -6,9 +6,49 @@
     <title>Component 1</title>
 </head>
 <body>
-    <div class="component1">
-        <h1>Welcome to Component 1</h1>
-        <p>This is the content of Component 1.</p>
+    <div class="component1-hero" style="background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.15);border-radius:8px;overflow:hidden;padding:24px 24px 16px 24px;max-width:600px;margin:24px auto 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <div id="hero-slides" style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <div class="hero-slide slide-1">
+                <div style="display:flex;align-items:center;justify-content:center;gap:24px;width:100%;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/TS_Wisla_Krakow.png" alt="TS Wisła Kraków" style="width:120px;height:120px;object-fit:contain;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" />
+                    <div style="flex:1;display:flex;flex-direction:column;align-items:center;">
+                        <h1 style="font-size:2.1rem;font-weight:700;margin:0 0 8px 0;line-height:1.1;text-align:center;">1,5 % Podatku Dochodowego Dla TS Wisła Kraków</h1>
+                        <p style="font-size:1.1rem;color:#444;margin:0 0 8px 0;text-align:center;">Sympatycy Białej Gwiazdy mają możliwość przekazania 1,5 % podatku dochodowego na rzecz Towarzystwa Sportowego "Wisła" Kraków. Aby przekazać 1,5 % swojego podatku w odpowiedniej rubryce należy wpisać nazwę...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide slide-2">
+                <div style="display:flex;align-items:center;justify-content:center;gap:24px;width:100%;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/TS_Wisla_Krakow.png" alt="TS Wisła Kraków" style="width:120px;height:120px;object-fit:contain;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" />
+                    <div style="flex:1;display:flex;flex-direction:column;align-items:center;">
+                        <h1 style="font-size:2.1rem;font-weight:700;margin:0 0 8px 0;line-height:1.1;text-align:center;">Sekcja Piłki Nożnej</h1>
+                        <p style="font-size:1.1rem;color:#444;margin:0 0 8px 0;text-align:center;">Dołącz do sekcji piłki nożnej TS Wisła Kraków! Treningi, mecze, pasja i rozwój dla dzieci i młodzieży pod okiem doświadczonych trenerów.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide slide-3">
+                <div style="display:flex;align-items:center;justify-content:center;gap:24px;width:100%;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/TS_Wisla_Krakow.png" alt="TS Wisła Kraków" style="width:120px;height:120px;object-fit:contain;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);" />
+                    <div style="flex:1;display:flex;flex-direction:column;align-items:center;">
+                        <h1 style="font-size:2.1rem;font-weight:700;margin:0 0 8px 0;line-height:1.1;text-align:center;">Aktualności</h1>
+                        <p style="font-size:1.1rem;color:#444;margin:0 0 8px 0;text-align:center;">Bądź na bieżąco z najnowszymi wydarzeniami, sukcesami i informacjami z życia klubu TS Wisła Kraków.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;margin-top:24px;gap:8px;">
+            <span class="hero-dot" data-slide="0" style="width:12px;height:12px;border-radius:50%;background:#0099ff;display:inline-block;cursor:pointer;"></span>
+            <span class="hero-dot" data-slide="1" style="width:12px;height:12px;border-radius:50%;background:#e0e0e0;display:inline-block;cursor:pointer;"></span>
+            <span class="hero-dot" data-slide="2" style="width:12px;height:12px;border-radius:50%;background:#e0e0e0;display:inline-block;cursor:pointer;"></span>
+        </div>
+    </div>
+    <section class="about-section" style="margin: 40px auto 0 auto; text-align: center;">
+        <h1 style="font-size:2.2rem;font-weight:700;">O nas</h1>
+    </section>
+    <div class="about-text-container" style="max-width:700px;margin:24px auto 0 auto;padding:24px 32px;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.07);text-align:center;font-size:1.15rem;color:#222;">
+        <p>
+            TS Wisła Strzelectwo to sekcja sportowa z bogatą historią i sukcesami na arenie krajowej oraz międzynarodowej. Naszym celem jest rozwijanie umiejętności strzeleckich, promowanie bezpieczeństwa oraz integracja pasjonatów tej dyscypliny. Zapraszamy wszystkich zainteresowanych do wspólnego treningu i rywalizacji!
+        </p>
     </div>
 </body>
 </html>

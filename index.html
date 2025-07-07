@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
-    <link rel="stylesheet" href="dist/styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <header class="main-menu">
+        <div class="menu-container">
+            <div class="menu-logo">
+                <!-- Image template -->
+                <img src="" alt="Logo" style="width:40px;height:40px;background:#eee;border-radius:50%;object-fit:cover;" />
+            </div>
+            <nav class="menu-nav">
+                <button class="menu-btn" id="home-btn">Home</button>
+                <button class="menu-btn" id="zawodnicy-btn">Zawodnicy</button>
+                <button class="menu-btn" id="sekcja-btn">Sekcja</button>
+                <button class="menu-btn" id="newsy-btn">Newsy</button>
+            </nav>
+        </div>
+    </header>
     <div id="app"></div>
-    <script type="module" src="dist/index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html> 

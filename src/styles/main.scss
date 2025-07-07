@@ -26,3 +26,98 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+// Header menu bar styles
+.main-menu {
+    
+    width: 100vw;
+    background: #111;
+    color: #fff;
+    padding: 0;
+    margin: 0 0 24px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-radius: 5px;
+}
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 56px;
+    padding: 0 24px;
+}
+.menu-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+}
+.menu-logo img {
+    width: 36px;
+    height: 36px;
+    background: #222;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+.menu-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.menu-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 8px;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: color 0.2s, background 0.3s, padding 0.3s;
+}
+.menu-btn:hover, .menu-btn:focus {
+    color: #00bfff;
+    outline: none;
+}
+.menu-btn.active {
+    background: #222;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: none;
+    font-weight: 700;
+    padding: 5px 16px;
+}
+
+.slide-1 {
+    background: url('https://i.imgur.com/0Q9QZpA.png') center/cover no-repeat;
+}
+.slide-2 {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+}
+.slide-3 {
+    background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+}
+.hero-slide {
+    background-blend-mode: overlay;
+    background-color: rgba(255,255,255,0.85);
+    border-radius: 8px;
+    min-height: 220px;
+    align-items: center;
+    justify-content: center;
+}
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+    position: static;
+    display: flex;
+}
+
+#hero-slides {
+    position: relative;
+    transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -4,21 +4,28 @@
   "description": "A project utilizing TypeScript, HTML, and SCSS.",
   "main": "src/index.ts",
   "scripts": {
-    "build": "npm run build:ts && npm run build:scss",
+    "build": "npm run build:ts && npm run build:scss && npm run copy:html && npm run copy:index",
     "build:ts": "tsc",
     "build:scss": "sass src/styles/main.scss dist/styles/main.css",
     "watch": "concurrently \"tsc -w\" \"sass --watch src/styles/main.scss dist/styles/main.css\"",
     "dev": "npm run build && live-server --port=3000 --open=/index.html",
-    "start": "npm run build && live-server --port=3000"
+    "start": "npm run build && live-server dist --port=3000 --open=/index.html",
+    "copy:html": "copyfiles -u 3 src/components/Component1/Component1.html dist/components/Component1/ && copyfiles -u 3 src/components/Component2/Component2.html dist/components/Component2/ && copyfiles -u 3 src/components/DataDisplay/DataDisplay.html dist/components/DataDisplay/",
+    "copy:index": "copyfiles index.html dist/"
   },
-  "dependencies": {},
   "devDependencies": {
-    "typescript": "^4.9.0",
-    "sass": "^1.58.0",
     "concurrently": "^7.6.0",
-    "live-server": "^1.2.2"
+    "copyfiles": "^2.4.1",
+    "live-server": "^1.2.2",
+    "sass": "^1.58.0",
+    "typescript": "^4.9.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  }
 }
