@@ -75,3 +75,21 @@ If you encounter any issues:
 2. Clear the dist folder and rebuild: `rm -rf dist && npm run build`
 3. Check that your browser supports ES modules
 4. Ensure the development server is running on the correct port
+
+
+77dbf-b4b90
+e87f2-abc75
+c0c0a-96029
+b0c44-18a09
+fbc26-a1176
+47d0f-0e333
+a7a3e-29968
+0115b-2a5e7
+4dbdc-d495e
+72c05-b006a
+430ed-b7cb1
+43a11-0f651
+41329-89e69
+2855d-3a52b
+6ecf6-59493
+0ad30-716d8
